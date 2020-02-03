@@ -1,0 +1,11 @@
+<b>Curso seleccionado: </b>{{cursoSeleccionado}}
+
+<!-- <app-item-curso></app-item-curso> -->
+
+<!-- <ul>
+    <li *ngFor="let curso of listaCursos">{{curso}}</li>
+</ul> -->
+
+<!-- <componente-crear-curso></componente-crear-curso> //esta es la tarea-->
+
+<app-item-curso *ngFor='let curso of listaCursos' [curso]="curso" (nombreEmitter)="recibirNombre($event)"></app-item-curso>

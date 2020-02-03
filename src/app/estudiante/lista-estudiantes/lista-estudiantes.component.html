@@ -1,0 +1,31 @@
+<img [src]="urlImagen" alt="" width="500">
+<button (click)="cambiarImagen()">Cambiar imagen</button>
+<button (click)="cambiarTexto()">{{changeTxt}}</button>
+<button (click)="cambiarTexto()" [innerText]="changeTxt"></button>
+<button (click)="cambiarTexto()" [innerHTML]="changeTxt"></button>
+<h3>{{titulo}}</h3>
+<input type="text" [value]="curso" [(ngModel)]="titulo">
+<a [href]="link">Enlace</a>
+<br>
+<table class="blueTable">
+    <tr>
+        <th>nombre</th>
+        <th>apellido</th>
+        <th>ci</th>
+    </tr>
+    <tr>
+        <td>Pancho</td>
+        <td>Villa</td>
+        <td>44444</td>
+    </tr>
+    <tr>
+        <td>Fulano</td>
+        <td>Perez</td>
+        <td>33333</td>
+    </tr>
+    <tr>
+        <td>Mengano</td>
+        <td>Robles</td>
+        <td>9999</td>
+    </tr>
+</table>
