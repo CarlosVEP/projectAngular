@@ -2,4 +2,4 @@
 <h2>{{curso.nombre}}</h2>
 <h5>{{curso.descripcion}}</h5>
 <img [src]="curso.imgUrl" alt="" width="50">
-<button type="button" (click)="enviarNombre(curso.nombre)">Enviar</button>
+<button (click)="enviarNombre(curso.nombre)" mat-raised-button color="primary">Enviar</button>
