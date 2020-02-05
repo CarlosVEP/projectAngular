@@ -8,17 +8,21 @@ import { Curso } from '../../models';
 })
 export class AddCursoComponent implements OnInit {
   nuevoCurso:Curso;
-  temp:object;
-  constructor() { }
+  nombreCurso:string;
+  descripcionCurso:string;
+  imagenCurso:string;
+  
   @Output()
   nuevoCursoEmitter:EventEmitter<Curso>=new EventEmitter();
+  constructor() { }
 
   ngOnInit() {
   }
   agregarCurso(){
-    this.nuevoCurso={nombre:document.getElementById("nombreCurso").value,descripcion:document.getElementById("descripcionCurso").value,imgUrl:document.getElementById("imagenCurso").value};
+    // this.nuevoCurso={nombre:document.getElementById("nombreCurso").value,descripcion:document.getElementById("descripcionCurso").value,imgUrl:document.getElementById("imagenCurso").value};
+    this.nuevoCurso={nombre:this.nombreCurso,descripcion:this.descripcionCurso,imgUrl:this.imagenCurso}
     console.log(this.nuevoCurso);
-    // this.nuevoCursoEmitter.emit(this.nuevoCurso);
+    this.nuevoCursoEmitter.emit(this.nuevoCurso);
   }
 
 }

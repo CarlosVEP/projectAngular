@@ -34,5 +34,9 @@ export class ListaCursoComponent implements OnInit {
     console.log('Recibiendo datos del hijo: ',nombreCurso);
     this.cursoSeleccionado=nombreCurso;
   }
+  recibirCurso(nuevoCurso: Curso):void{
+    console.log("recibiendo curso del hijo: ",nuevoCurso);
+    this.listaCursos.push(nuevoCurso);
+  }
 
 }

@@ -1,7 +1,14 @@
 <label for="nombreCurso">nombre del Curso</label>
-<input type="text" name="nombreCurso" id="nombreCurso">
+<input type="text" name="nombreCurso" id="nombreCurso" [(ngModel)]="nombreCurso">
 <label for="descripcionCurso">descripcion del Curso</label>
-<input type="text" name="descripcionCurso" id="descripcionCurso">
+<input type="text" name="descripcionCurso" id="descripcionCurso" [(ngModel)]="descripcionCurso">
 <label for="imagenCurso">imagen del Curso</label>
-<input type="text" name="imagenCurso" id="imagenCurso">
+<input type="text" name="imagenCurso" id="imagenCurso" [(ngModel)]="imagenCurso">
 <button (click)="agregarCurso()">Agregar</button>
+<!-- <label >nombre del Curso</label>
+<input type="text"  [(ngModel)]="nombre">
+<label>descripcion del Curso</label>
+<input type="text" >
+<label>imagen del Curso</label>
+<input type="text">
+<button (click)="agregarCurso()">Agregar</button> -->
