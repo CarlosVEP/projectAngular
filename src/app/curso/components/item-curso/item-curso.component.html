@@ -4,6 +4,6 @@
 <img [src]="curso.imgUrl" alt="" width="50">
 <button (click)="enviarNombre(curso.nombre)" mat-raised-button color="primary">Enviar</button>
 <button  mat-raised-button color="accent" [routerLink]="['/cursos/nuevo']">Nuevo</button>
-<button  mat-raised-button color="basic">Ver</button>
+<button  mat-raised-button color="basic" [routerLink]="['/cursos/ver']" [queryParams]="curso">Ver</button>
 <button  mat-raised-button color="accent">Editar</button>
 <button  mat-raised-button color="warn">Eliminar</button>

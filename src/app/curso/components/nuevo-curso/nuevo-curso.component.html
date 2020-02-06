@@ -1,10 +1,24 @@
 <form [formGroup]="form">
-    <label for="nombreCurso">Nombre del curso:</label>
-    <input type="text" id="nombreCurso" formControlName="nombre">
-    <br>
-    <label for="descripcionCurso">Descripcion del curso:</label>
-    <input type="text" id="descripcionCurso" formControlName="descripcion">
-    <br>
-    <label for="imgUrl">imagen curso:</label>
-    <input type="text" id="imgUrl" formControlName="imgUrl">
-</form>
+
+    <mat-form-field>
+      <input matInput type="text" formControlName="nombre" placeholder="Nombre">
+      <mat-error *ngIf="nombre.invalid && nombre.hasError('required') && (nombre.dirty || nombre.touched)">
+        El campo Nombre es <strong>REQUERIDO!!!</strong>
+      </mat-error>
+      <mat-error *ngIf="nombre.invalid && nombre.hasError('minlength') && (nombre.dirty || nombre.touched)">
+        El tamaño minimo es <strong>3 CARACTERES!!!</strong>
+      </mat-error>
+      <mat-error *ngIf="nombre.invalid && nombre.hasError('maxlength') && (nombre.dirty || nombre.touched)">
+        El tamaño maximo es <strong>10 CARACTERES!!!</strong>
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput type="text" formControlName="descripcion" placeholder="Decripcion">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput type="text" formControlName="imgUrl" placeholder="Url imagen">
+    </mat-form-field>
+  
+  </form>
