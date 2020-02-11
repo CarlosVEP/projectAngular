@@ -12,4 +12,4 @@
 
 <!-- <componente-crear-curso></componente-crear-curso> //esta es la tarea-->
 
-<app-item-curso *ngFor='let curso of listaCursos' [curso]="curso" (nombreEmitter)="recibirNombre($event)"></app-item-curso>
+<app-item-curso *ngFor='let curso of listaCursos' [curso]="curso" (nombreEmitter)="recibirNombre($event)" (nombreElimEmitter)="eliminarCurso($event)"></app-item-curso>

@@ -12,6 +12,9 @@ export class ItemCursoComponent implements OnInit {
 
   @Output()
   nombreEmitter:EventEmitter<string>=new EventEmitter();//El EventEmitter debe ser de angular/core
+
+  @Output()
+  nombreElimEmitter:EventEmitter<string>=new EventEmitter();//El EventEmitter debe ser de angular/core
   constructor() { }
 
   ngOnInit() {
@@ -19,6 +22,10 @@ export class ItemCursoComponent implements OnInit {
   enviarNombre(nombreCurso:string):void{
     console.log("tratando de enviar: "+nombreCurso);
     this.nombreEmitter.emit(nombreCurso);
+  }
+  eliminarCurso(nombreCurso:string):void{
+    console.log("tratando de eliminar: "+nombreCurso);
+    this.nombreElimEmitter.emit(nombreCurso);
   }
 
 }

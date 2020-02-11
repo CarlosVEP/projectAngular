@@ -11,10 +11,11 @@ import { MaterialModule } from '../material.module';
 import { EditarCursoComponent } from './components/editar-curso/editar-curso.component';
 import { VerCursoComponent } from './components/ver-curso/ver-curso.component';
 import { NuevoCursoComponent } from './components/nuevo-curso/nuevo-curso.component';
+import { EliminarCursoComponent } from './components/eliminar-curso/eliminar-curso.component';
 
 
 @NgModule({
-  declarations: [ListaCursoComponent, ItemCursoComponent, AddCursoComponent, EditarCursoComponent, VerCursoComponent, NuevoCursoComponent],
+  declarations: [ListaCursoComponent, ItemCursoComponent, AddCursoComponent, EditarCursoComponent, VerCursoComponent, NuevoCursoComponent, EliminarCursoComponent],
   imports: [
     CommonModule,
     CursoRoutingModule,
